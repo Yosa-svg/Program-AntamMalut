@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { ArrowRight, Play, Sparkles } from "lucide-react";
+import { ArrowRight, Play, MapPin } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -39,7 +39,7 @@ export default function Hero() {
               transition={{ duration: 0.4, delay: 0.1 }}
               className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-white/25 bg-white/10 backdrop-blur-md mb-6 sm:mb-8 text-xs sm:text-sm font-semibold tracking-wide text-white uppercase shadow-sm self-start"
             >
-              <Sparkles size={14} className="text-[#F6A236]" aria-hidden="true" />
+              <MapPin size={14} className="text-[#F6A236]" aria-hidden="true" />
               <span>CSR ANTAM — PT ANTAM Tbk UBPN Maluku Utara</span>
             </motion.div>
 
