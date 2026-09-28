@@ -34,8 +34,8 @@ const FOCUS_AREAS = [
     description:
       "Pengembangan kewirausahaan lokal, penguatan kapasitas mitra binaan, serta hilirisasi produk dan komoditas unggulan masyarakat.",
     href: "/produk",
-    bg: "bg-[#F6A236]",
-    bgHover: "hover:bg-[#E08E20]",
+    bg: "bg-gradient-to-br from-[#F6A236] to-[#B8691A]",
+    bgHover: "hover:from-[#E08E20] hover:to-[#A15A15]",
     iconBg: "bg-white/25",
   },
   {
