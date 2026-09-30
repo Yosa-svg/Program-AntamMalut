@@ -34,9 +34,10 @@ const FOCUS_AREAS = [
     description:
       "Pengembangan kewirausahaan lokal, penguatan kapasitas mitra binaan, serta hilirisasi produk dan komoditas unggulan masyarakat.",
     href: "/produk",
-    bg: "bg-gradient-to-br from-[#D98A2E] to-[#8A4E14]",
-    bgHover: "hover:from-[#C97A20] hover:to-[#7A4310]",
-    iconBg: "bg-white/25",
+    bg: "bg-[#F6A236]",
+    bgHover: "hover:bg-[#E08E20]",
+    textColor: "text-[#172121]",
+    iconBg: "bg-[#172121]/10",
   },
   {
     id: "sosial-masyarakat",
@@ -93,23 +94,23 @@ export default function Focus() {
                 className={`group flex items-start gap-5 rounded-2xl p-6 sm:p-7 ${item.bg} ${item.bgHover} transition-all duration-300 shadow-md hover:shadow-xl min-h-[140px]`}
               >
                 {/* Icon — left side */}
-                <div className={`shrink-0 w-13 h-13 ${item.iconBg} rounded-xl flex items-center justify-center text-white mt-0.5`}>
+                <div className={`shrink-0 w-13 h-13 ${item.iconBg} rounded-xl flex items-center justify-center ${item.textColor || "text-white"} mt-0.5`}>
                   {item.icon}
                 </div>
 
                 {/* Text content — right side */}
                 <div className="flex flex-col flex-1 min-w-0">
-                  <h3 className="font-bold text-lg text-white mb-2">
+                  <h3 className={`font-bold text-lg ${item.textColor || "text-white"} mb-2`}>
                     {item.title}
                   </h3>
 
-                  <p className="text-sm text-white/80 leading-relaxed font-normal mb-4">
+                  <p className={`text-sm ${item.textColor ? "text-[#172121]/75" : "text-white/80"} leading-relaxed font-normal mb-4`}>
                     {item.description}
                   </p>
 
                   <Link
                     href={item.href}
-                    className="inline-flex items-center gap-1.5 text-xs font-bold text-white/90 hover:text-white transition-colors mt-auto"
+                    className={`inline-flex items-center gap-1.5 text-xs font-bold ${item.textColor ? "text-[#172121] hover:text-[#0D726D]" : "text-white/90 hover:text-white"} transition-colors mt-auto`}
                   >
                     Selengkapnya
                     <ArrowRight size={13} className="group-hover:translate-x-0.5 transition-transform" aria-hidden="true" />
